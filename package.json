@@ -5,7 +5,7 @@
   "description": "Simple CLI tool",
   "main": "lib/main.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "lint": "eslint lib/*.js test/*.test.js",
     "start": "node lib/main.js"
   },
