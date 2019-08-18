@@ -1,7 +1,11 @@
 const hello = require('../lib/hello');
+const expect = require('chai').expect;
 
-test('getGreeting should return correct message', () => {
-  const greeting = hello.getGreeting();
-
-  expect(greeting).toBe('Hello World!');
+describe('Hello World function', function() {
+  it('should return correct message', function() {
+    const greeting = hello.getGreeting();
+  
+    expect(greeting).to.be.equal('Hello World!');
+  })
 })
+

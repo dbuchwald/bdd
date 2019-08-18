@@ -5,7 +5,7 @@
   "description": "Simple CLI tool",
   "main": "lib/main.js",
   "scripts": {
-    "test": "jest",
+    "test": "mocha",
     "lint": "eslint lib/*.js test/*.test.js",
     "start": "node lib/main.js"
   },
@@ -13,8 +13,9 @@
   "author": "Dawid Buchwald",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.1.0",
-    "eslint-plugin-jest": "^22.15.1",
-    "jest": "^24.8.0"
+    "eslint-plugin-mocha": "^6.0.0",
+    "mocha": "^6.2.0"
   }
 }
