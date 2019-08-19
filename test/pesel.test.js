@@ -10,6 +10,10 @@ describe('PESEL handling library', function() {
       expect(pesel.verifyPESEL()).to.be.false;
     })
     
+    it('should return false when null data passed', function() {
+      expect(pesel.verifyPESEL(null)).to.be.false;
+    })
+    
     it('should return false when empty PESEL passed', function() {
       expect(pesel.verifyPESEL('')).to.be.false;
     })
