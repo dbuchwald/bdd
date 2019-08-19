@@ -4,6 +4,9 @@
   "private": true,
   "description": "Simple CLI tool",
   "main": "lib/main.js",
+  "bin": {
+    "pesel": "bin/pesel"
+  },
   "scripts": {
     "test": "mocha",
     "lint": "eslint lib/*.js test/*.test.js",
@@ -18,5 +21,8 @@
     "eslint": "^6.1.0",
     "eslint-plugin-mocha": "^6.0.0",
     "mocha": "^6.2.0"
+  },
+  "dependencies": {
+    "arg": "^4.1.1"
   }
 }
