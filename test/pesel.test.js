@@ -34,6 +34,14 @@ describe('PESEL handling library', function() {
       expect(pesel.verifyPESEL('44051401459')).to.be.false;
     })
     
+    it('should return false when passing PESEL with invalid date', function() {
+      expect(pesel.verifyPESEL('99043318946')).to.be.false;
+    })
+    
+    it('should return false when passing PESEL with invalid date format', function() {
+      expect(pesel.verifyPESEL('99023118940')).to.be.false;
+    })
+    
     it('should return true when passing valid PESEL', function() {
       expect(pesel.verifyPESEL('44051401458')).to.be.true;
     })

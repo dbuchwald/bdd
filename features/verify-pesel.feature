@@ -17,6 +17,8 @@ Feature: Verify PESEL
       | 'abcdefghijk'    | invalid |
       | '12345678901'    | invalid |
       | '  123afga  '    | invalid |
+      | '99043318946'    | invalid |
+      | '99023118940'    | invalid |
       | '44051401458'    | valid   |
       | '44051401459'    | invalid |
       | '  44051401458'  | valid   |
