@@ -10,7 +10,7 @@
   "scripts": {
     "test": "mocha",
     "bdd-test": "./node_modules/.bin/cucumber-js",
-    "lint": "eslint lib/*.js test/*.test.js",
+    "lint": "eslint lib/*.js test/*.test.js features/support/*.js",
     "start": "node lib/main.js"
   },
   "keywords": [],
