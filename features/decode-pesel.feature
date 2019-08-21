@@ -8,6 +8,11 @@ Feature: Decode PESEL
     When PESEL is decoded
     Then The decoded PESEL should be invalid
 
+  Scenario: simple negative scenario
+    Given PESEL number is '99023118940'
+    When PESEL is decoded
+    Then The decoded PESEL should be invalid
+
   Scenario: simple positive scenario
     Given PESEL number is '44051401458'
     When PESEL is decoded
