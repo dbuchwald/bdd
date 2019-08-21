@@ -6,6 +6,8 @@ class CustomWorld {
     this.pesel = undefined;
     this.validPESEL = undefined;
     this.decodedPESEL = undefined;
+    this.args = ['node', 'pesel'];
+    this.result = undefined;
   }
 
   setGreeting(text) {
@@ -22,6 +24,14 @@ class CustomWorld {
 
   setDecoded(decoded) {
     this.decodedPESEL = decoded;
+  }
+
+  addParameter(arg) {
+    this.args.push(arg);
+  }
+
+  setResult(result) {
+    this.result = result;
   }
 }
 
