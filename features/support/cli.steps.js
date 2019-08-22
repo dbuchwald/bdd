@@ -6,6 +6,14 @@ Given('Parameter is {string}', function (string) {
   this.addParameter(string);
 });
 
+Given('Flag is {string}', function (string) {
+  if (string !== undefined && string !== null && string.length>1) {
+    this.addParameter('--' + string);
+  } else {
+    this.addParameter('-' + string);
+  }
+});
+
 When('Application is launched', function () {
   this.result = cli(this.args);
 });

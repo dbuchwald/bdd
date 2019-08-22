@@ -8,19 +8,19 @@ Feature: CLI operation
     When Application is launched
     Then It should run correctly
 
-  Scenario: simple CLI invocation with flag
+  Scenario: simple CLI invocation with short flag
     Given Parameter is '44051401458'
-      And Parameter is '--verify'
+      And Flag is 'v'
     When Application is launched
     Then It should run correctly
 
-  Scenario: simple CLI invocation with abbreviated flag
+  Scenario: simple CLI invocation with long flag
     Given Parameter is '44051401458'
-      And Parameter is '-v'
+      And Flag is 'verify'
     When Application is launched
     Then It should run correctly
 
-  Scenario: simple CLI invocation with more parameters
+    Scenario: simple CLI invocation with more parameters
     Given Parameter is '44051401458'
       And Parameter is 'another one'
     When Application is launched
@@ -29,7 +29,7 @@ Feature: CLI operation
 
   Scenario: simple CLI invocation with incorrect flag
     Given Parameter is '44051401458'
-      And Parameter is '--wrong'
+      And Flag is 'wrong'
     When Application is launched
     Then It should fail
      And The message should be 'Unknown or unexpected option: --wrong'
