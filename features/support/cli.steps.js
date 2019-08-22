@@ -11,9 +11,13 @@ When('Application is launched', function () {
 });
 
 Then('It should run correctly', function () {
-  expect(this.result).to.be.equal(0);
+  expect(this.result.error).to.be.false;
 });
 
 Then('It should fail', function () {
-  expect(this.result).to.be.equal(1);
+  expect(this.result.error).to.be.true;
+});
+
+Then('The message should be {string}', function (string) {
+  expect(this.result.errorMessage).to.be.equal(string);
 });

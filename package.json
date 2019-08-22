@@ -8,10 +8,10 @@
     "pesel": "bin/pesel"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "./node_modules/.bin/mocha",
     "bdd-test": "./node_modules/.bin/cucumber-js",
-    "lint": "eslint lib/*.js test/*.test.js features/support/*.js",
-    "start": "node lib/main.js"
+    "lint": "./node_modules/.bin/eslint lib/*.js test/*.test.js features/support/*.js",
+    "start": "node lib/main.js 44051401458"
   },
   "keywords": [],
   "author": "Dawid Buchwald",

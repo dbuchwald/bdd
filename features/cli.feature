@@ -19,3 +19,11 @@ Feature: CLI operation
       And Parameter is 'another one'
     When Application is launched
     Then It should fail
+     And The message should be 'Incorrect number of parameters given'
+
+  Scenario: simple CLI invocation with incorrect flag
+    Given Parameter is '44051401458'
+      And Parameter is '--wrong'
+    When Application is launched
+    Then It should fail
+     And The message should be 'Unknown or unexpected option: --wrong'
