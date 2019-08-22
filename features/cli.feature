@@ -14,6 +14,12 @@ Feature: CLI operation
     When Application is launched
     Then It should run correctly
 
+  Scenario: simple CLI invocation with abbreviated flag
+    Given Parameter is '44051401458'
+      And Parameter is '-v'
+    When Application is launched
+    Then It should run correctly
+
   Scenario: simple CLI invocation with more parameters
     Given Parameter is '44051401458'
       And Parameter is 'another one'

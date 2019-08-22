@@ -12,6 +12,11 @@ describe('CLI operation', function() {
     expect(result.error).to.be.false;
   })
 
+  it('should work correctly with single parameter and an abbreviated flag', function() {
+    const result = cli(['node', 'pesel', '44051401458', '-v']);
+    expect(result.error).to.be.false;
+  })
+
   it('should fail with multiple parameters', function() {
     const result = cli(['node', 'pesel', '44051401458', 'another one']);
     expect(result.error).to.be.true;
