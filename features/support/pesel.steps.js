@@ -1,5 +1,5 @@
 const { Given, When, Then } = require("cucumber");
-const { verifyPESEL, decodePESEL } = require('../../lib/pesel.js');
+const { verifyPESEL, decodePESEL, processPESEL } = require('../../lib/pesel.js');
 const chai = require('chai');
 const expect = chai.expect;
 chai.use(require('chai-datetime'));
@@ -8,12 +8,21 @@ Given("PESEL number is {string}", function(pesel) {
   this.setPESEL(pesel);
 });
 
+Given('Only verification is required', function () {
+  this.setVerifyOnly(true);
+});
+
 When("PESEL is verified", function() {
   this.setValid(verifyPESEL(this.pesel));
 });
 
 When("PESEL is decoded", function() {
   this.setDecoded(decodePESEL(this.pesel));
+});
+
+When('PESEL is processed', function () {
+  this.setDecoded(processPESEL(this.pesel, this.verifyOnly));
+  this.setValid(this.decodedPESEL.valid);
 });
 
 Then("the response should be valid", function() {

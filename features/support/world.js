@@ -4,6 +4,7 @@ class CustomWorld {
   constructor() {
     this.greeting = undefined;
     this.pesel = undefined;
+    this.verifyOnly = undefined;
     this.validPESEL = undefined;
     this.decodedPESEL = undefined;
     this.args = ['node', 'pesel'];
@@ -16,6 +17,10 @@ class CustomWorld {
 
   setPESEL(pesel) {
     this.pesel = pesel;
+  }
+
+  setVerifyOnly(flag) {
+    this.verifyOnly = flag;
   }
 
   setValid(flag) {
