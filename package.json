@@ -22,7 +22,7 @@
     "cucumber": "^5.1.0",
     "eslint": "^6.1.0",
     "eslint-plugin-mocha": "^6.0.0",
-    "mocha": "^6.2.0"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "arg": "^4.1.1",
